@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+body{
+    display: grid;
+    grid-template-columns: 100px repeat(6, 1fr) 100px;
+}
+.wrapper{
+    grid-column: 2/ -2;
+    grid-template-columns: 150px repeat(6, 1fr) 150px;
+    grid-template-rows: 
+                        [head] 201px 
+                        [main] auto  
+                        [recomend] auto 
+                        [foot] 200px;
+}
+.m-article{
+    grid-column: 1/ span 5;
+    grid-row: main;
+}
+.article-wrapper{
+    text-align: center;
+}
+.hero+h1{
+
+}
+.intro{
+    grid-column: 6/ span2;
+    grid-row: main;
+}
+.recomend{
+    grid-row: recomend;
+}
+footer{
+    grid-row: foot;
+}
